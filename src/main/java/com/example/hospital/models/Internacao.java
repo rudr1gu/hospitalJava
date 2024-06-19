@@ -1,68 +1,59 @@
 package com.example.hospital.models;
 
-public class Internacao {
-    private String dataEntrada;
-    private String dataSaida;
-    private String condicao;
-    private String nomePaciente;
-    private String nomeMedico;
-    private String nomeEnfermeiro;
+public class Internacao extends Paciente{
+    private String dataInternacao;
+    private String dataAlta;
+    private String motivoInternacao;
+    private String medicoResponsavel;
+    private String enfermeiroResponsavel;
 
-    public Internacao(String dataEntrada, String dataSaida, String condicao, String nomePaciente, String nomeMedico, String nomeEnfermeiro){
-        this.dataEntrada = dataEntrada;
-        this.dataSaida = dataSaida;
-        this.condicao = condicao;
-        this.nomePaciente = nomePaciente;
-        this.nomeMedico = nomeMedico;
-        this.nomeEnfermeiro = nomeEnfermeiro;
+    public Internacao(String nome, int idade, int RG, String CPF, String dataNascimento, String telefone, String email, String endereco, String plano, String condicao, String dataCadastro, boolean internado, String dataInternacao, String dataAlta, String motivoInternacao, String medicoResponsavel, String enfermeiroResponsavel){
+        super(nome, idade, RG, CPF, dataNascimento, telefone, email, endereco, plano, condicao, dataCadastro, internado);
+        this.setDataInternacao(dataInternacao);
+        this.setDataAlta(dataAlta);
+        this.setMotivoInternacao(motivoInternacao);
+        this.setMedicoResponsavel(medicoResponsavel);
+        this.setEnfermeiroResponsavel(enfermeiroResponsavel);
     }
 
-    public String getDataEntrada() {
-        return dataEntrada;
+    public String getDataInternacao() {
+        return dataInternacao;
     }
 
-    public void setDataEntrada(String dataEntrada) {
-        this.dataEntrada = dataEntrada;
+    public void setDataInternacao(String dataInternacao) {
+        this.dataInternacao = dataInternacao;
     }
 
-    public String getDataSaida() {
-        return dataSaida;
+    public String getDataAlta() {
+        return dataAlta;
     }
 
-    public void setDataSaida(String dataSaida) {
-        this.dataSaida = dataSaida;
+    public void setDataAlta(String dataAlta) {
+        this.dataAlta = dataAlta;
     }
 
-    public String getCondicao() {
-        return condicao;
+    public String getMotivoInternacao() {
+        return motivoInternacao;
     }
 
-    public void setCondicao(String condicao) {
-        this.condicao = condicao;
+    public void setMotivoInternacao(String motivoInternacao) {
+        this.motivoInternacao = motivoInternacao;
     }
 
-    public String getNomePaciente() {
-        return nomePaciente;
+    public String getMedicoResponsavel() {
+        return medicoResponsavel;
     }
 
-    public void setNomePaciente(String nomePaciente) {
-        this.nomePaciente = nomePaciente;
+    public void setMedicoResponsavel(String medicoResponsavel) {
+        this.medicoResponsavel = medicoResponsavel;
     }
 
-    public String getNomeMedico() {
-        return nomeMedico;
+    public String getEnfermeiroResponsavel() {
+        return enfermeiroResponsavel;
     }
 
-    public void setNomeMedico(String nomeMedico) {
-        this.nomeMedico = nomeMedico;
+    public void setEnfermeiroResponsavel(String enfermeiroResponsavel) {
+        this.enfermeiroResponsavel = enfermeiroResponsavel;
     }
 
-    public String getNomeEnfermeiro() {
-        return nomeEnfermeiro;
-    }
-
-    public void setNomeEnfermeiro(String nomeEnfermeiro) {
-        this.nomeEnfermeiro = nomeEnfermeiro;
-    }
-    
 }
